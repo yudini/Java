@@ -21,7 +21,7 @@ public class FigureEditor {
 		}
 
 		if (!b) {
-			rectangles[numOfRec++] = r; // rectangles에 r 저장 후 count 증가
+			rectangles[numOfRec++] = r; // rectangles에 r 저장 후 numOfRec 증가
 		}
 	}
 
@@ -35,7 +35,7 @@ public class FigureEditor {
 		}
 
 		if (!b) {
-			circles[numOfCircle++] = c; // circles에 c 저장 후 count2 증가
+			circles[numOfCircle++] = c; // circles에 c 저장 후 numOfCircle 증가
 		}
 	}
 
