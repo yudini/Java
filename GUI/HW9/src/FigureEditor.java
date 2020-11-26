@@ -7,14 +7,14 @@ public class FigureEditor extends JFrame {
 		setTitle("MyFrame");
 		A panel1 = new A();
 		C panel2 = new C();
-		Container con = getContentPane(); // ÄÁÅÙÃ÷ÆÒ ¾Ë¾Æ³»±â
-		con.setLayout(new BorderLayout()); // ÄÁÅÄÃ÷ÆÒ¿¡ ¹èÄ¡°ü¸®ÀÚ »ı¼º
+		Container con = getContentPane(); // ì»¨í…ì¸ íŒ¬ ì•Œì•„ë‚´ê¸°
+		con.setLayout(new BorderLayout()); // ì»¨íƒ ì¸ íŒ¬ì— ë°°ì¹˜ê´€ë¦¬ì ìƒì„±
 
-		con.add(panel1, BorderLayout.CENTER); // panel1À» center¿¡ ´Ş±â
-		con.add(panel2, BorderLayout.WEST); // panel2¸¦ west¿¡ ´Ş±â
+		con.add(panel1, BorderLayout.CENTER); // panel1ì„ centerì— ë‹¬ê¸°
+		con.add(panel2, BorderLayout.WEST); // panel2ë¥¼ westì— ë‹¬ê¸°
 
-		setSize(600, 300); // ÇÁ·¹ÀÓ Å©±â ¼³Á¤
-		setVisible(true); // È­¸é¿¡ ÇÁ·¹ÀÓ Ãâ·Â
+		setSize(600, 300); // í”„ë ˆì„ í¬ê¸° ì„¤ì •
+		setVisible(true); // í™”ë©´ì— í”„ë ˆì„ ì¶œë ¥
 	}
 
 	public static void main(String[] args) {
@@ -25,25 +25,25 @@ public class FigureEditor extends JFrame {
 }
 
 
-class A extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â AÅ¬·¡½º
+class A extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Aí´ë˜ìŠ¤
 	A() {
-		setBackground(Color.YELLOW); // ¹è°æÀ» yellow·Î ¼³Á¤
-		add(new JLabel("¿©±â°¡ ±×·¡ÇÈ °´Ã¼¸¦ ±×¸®´Â °÷ÀÔ´Ï´Ù.")); // ÅØ½ºÆ® ´Ş±â
+		setBackground(Color.YELLOW); // ë°°ê²½ì„ yellowë¡œ ì„¤ì •
+		add(new JLabel("ì—¬ê¸°ê°€ ê·¸ë˜í”½ ê°ì²´ë¥¼ ê·¸ë¦¬ëŠ” ê³³ì…ë‹ˆë‹¤.")); // í…ìŠ¤íŠ¸ ë‹¬ê¸°
 	}
 
 }
 
-class B extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â BÅ¬·¡½º
+class B extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Bí´ë˜ìŠ¤
 	B() {
-		setBackground(Color.BLUE); // ¹è°æÀ» blue·Î ¼³Á¤
-		setLayout(new GridLayout(3, 1, 5, 5)); // ¹èÄ¡°ü¸®ÀÚ »ı¼º
-		add(new JButton("»ç°¢")); // ¹öÆ° ´Ş±â
-		add(new JButton("Á÷¼±")); // ¹öÆ° ´Ş±â
-		add(new JButton("Å¸¿ø"));// ¹öÆ° ´Ş±â
+		setBackground(Color.BLUE); // ë°°ê²½ì„ blueë¡œ ì„¤ì •
+		setLayout(new GridLayout(3, 1, 5, 5)); // ë°°ì¹˜ê´€ë¦¬ì ìƒì„±
+		add(new JButton("ì‚¬ê°")); // ë²„íŠ¼ ë‹¬ê¸°
+		add(new JButton("ì§ì„ ")); // ë²„íŠ¼ ë‹¬ê¸°
+		add(new JButton("íƒ€ì›"));// ë²„íŠ¼ ë‹¬ê¸°
 	}
 }
 
-class C extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â CÅ¬·¡½º
+class C extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Cí´ë˜ìŠ¤
 	C() {
 		add(new B());
 	}

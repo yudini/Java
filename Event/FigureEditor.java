@@ -8,14 +8,14 @@ public class FigureEditor extends JFrame {
 		setTitle("MyFrame");
 		A panelA = new A();
 		C panelC = new C(panelA);
-		Container con = getContentPane(); // ÄÁÅÙÃ÷ÆÒ ¾Ë¾Æ³»±â
-		con.setLayout(new BorderLayout()); // ÄÁÅÄÃ÷ÆÒ¿¡ ¹èÄ¡°ü¸®ÀÚ »ı¼º
+		Container con = getContentPane(); // ì»¨í…ì¸ íŒ¬ ì•Œì•„ë‚´ê¸°
+		con.setLayout(new BorderLayout()); // ì»¨íƒ ì¸ íŒ¬ì— ë°°ì¹˜ê´€ë¦¬ì ìƒì„±
 
-		con.add(panelA, BorderLayout.CENTER); // panel1À» center¿¡ ´Ş±â
-		con.add(panelC, BorderLayout.WEST); // panel2¸¦ west¿¡ ´Ş±â
+		con.add(panelA, BorderLayout.CENTER); // panel1ì„ centerì— ë‹¬ê¸°
+		con.add(panelC, BorderLayout.WEST); // panel2ë¥¼ westì— ë‹¬ê¸°
 
-		setSize(600, 300); // ÇÁ·¹ÀÓ Å©±â ¼³Á¤
-		setVisible(true); // È­¸é¿¡ ÇÁ·¹ÀÓ Ãâ·Â
+		setSize(600, 300); // í”„ë ˆì„ í¬ê¸° ì„¤ì •
+		setVisible(true); // í™”ë©´ì— í”„ë ˆì„ ì¶œë ¥
 	}
 
 	public static void main(String[] args) {
@@ -25,29 +25,29 @@ public class FigureEditor extends JFrame {
 
 }
 
-class A extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â AÅ¬·¡½º
-	 JLabel la;  // Àü¿ªº¯¼ö·Î ¼±¾ğµÈ JLabel
+class A extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Aí´ë˜ìŠ¤
+	 JLabel la;  // ì „ì—­ë³€ìˆ˜ë¡œ ì„ ì–¸ëœ JLabel
 
 	A() {
-		setBackground(Color.YELLOW); // ¹è°æÀ» yellow·Î ¼³Á¤
-		la = new JLabel("»ç°¢"); // "»ç°¢"ÀÌ¶ó°í ÀûÈù ¶óº§ ´Ş±â
+		setBackground(Color.YELLOW); // ë°°ê²½ì„ yellowë¡œ ì„¤ì •
+		la = new JLabel("ì‚¬ê°"); // "ì‚¬ê°"ì´ë¼ê³  ì íŒ ë¼ë²¨ ë‹¬ê¸°
 		add(la);
-		addMouseListener(new MyMouseListener());// MouseListener ¸®½º³Ê µî·Ï
-		addMouseMotionListener(new MyMouseListener());// MouseMotionListener ¸®½º³Ê µî·Ï
+		addMouseListener(new MyMouseListener());// MouseListener ë¦¬ìŠ¤ë„ˆ ë“±ë¡
+		addMouseMotionListener(new MyMouseListener());// MouseMotionListener ë¦¬ìŠ¤ë„ˆ ë“±ë¡
 	}
 
-	// Mouse ¸®½º³Ê¿Í MouseMoiton¸®½º³Ê¸¦ ¸ğµÎ °¡Áø ¸®½º³Ê ÀÛ¼º
+	// Mouse ë¦¬ìŠ¤ë„ˆì™€ MouseMoitonë¦¬ìŠ¤ë„ˆë¥¼ ëª¨ë‘ ê°€ì§„ ë¦¬ìŠ¤ë„ˆ ì‘ì„±
 	private class MyMouseListener implements MouseListener, MouseMotionListener {
-		// MouseListenerÀÇ 5°³ ¸Ş¼Òµå ±¸Çö
-		public void mousePressed(MouseEvent e) { // ¸¶¿ì½º°¡ ´­·¯Áø À§Ä¡(x,y)Á¡ Ãâ·Â
+		// MouseListenerì˜ 5ê°œ ë©”ì†Œë“œ êµ¬í˜„
+		public void mousePressed(MouseEvent e) { // ë§ˆìš°ìŠ¤ê°€ ëˆŒëŸ¬ì§„ ìœ„ì¹˜(x,y)ì  ì¶œë ¥
 			la.setLocation(e.getX(), e.getY());
 		}
 
-		public void mouseReleased(MouseEvent e) {// ¸¶¿ì½º°¡ ¶¼¾îÁø À§Ä¡(x,y)Á¡ Ãâ·Â
+		public void mouseReleased(MouseEvent e) {// ë§ˆìš°ìŠ¤ê°€ ë–¼ì–´ì§„ ìœ„ì¹˜(x,y)ì  ì¶œë ¥
 			la.setLocation(e.getX(), e.getY());
 		}
 
-		public void mouseClicked(MouseEvent e) { // ¸¶¿ì½º°¡ Å¬¸¯µÈ ¼ø°£ À§Ä¡ (x,y)Á¡ Ãâ·Â
+		public void mouseClicked(MouseEvent e) { // ë§ˆìš°ìŠ¤ê°€ í´ë¦­ëœ ìˆœê°„ ìœ„ì¹˜ (x,y)ì  ì¶œë ¥
 			la.setLocation(e.getX(), e.getY());
 		}
 
@@ -57,8 +57,8 @@ class A extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â AÅ¬·¡½º
 		public void mouseExited(MouseEvent e) {
 		}
 
-		// MouseMotionListenerÀÇ 2°³ ¸Ş¼Òµå ±¸Çö
-		public void mouseDragged(MouseEvent e) { // ¸¶¿ì½º°¡ µå·¡±ëµÇ´Â µ¿¾È È£Ãâ
+		// MouseMotionListenerì˜ 2ê°œ ë©”ì†Œë“œ êµ¬í˜„
+		public void mouseDragged(MouseEvent e) { // ë§ˆìš°ìŠ¤ê°€ ë“œë˜ê¹…ë˜ëŠ” ë™ì•ˆ í˜¸ì¶œ
 			la.setLocation(e.getX(), e.getY());
 		}
 
@@ -69,36 +69,36 @@ class A extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â AÅ¬·¡½º
 
 }
 
-class B extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â BÅ¬·¡½º
-	A a=new A();    //AÅ¬·¡½º °´Ã¼ a ¼±¾ğ ¹× »ı¼º
-	B(A a) {   //AÅ¬·¡½º¸¦ ÆÄ¶ó¹ÌÅÍ·Î ¹Ş´Â B»ı¼ºÀÚ
+class B extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Bí´ë˜ìŠ¤
+	A a=new A();    //Aí´ë˜ìŠ¤ ê°ì²´ a ì„ ì–¸ ë° ìƒì„±
+	B(A a) {   //Aí´ë˜ìŠ¤ë¥¼ íŒŒë¼ë¯¸í„°ë¡œ ë°›ëŠ” Bìƒì„±ì
 		this.a=a;
-		setBackground(Color.BLUE); // ¹è°æÀ» blue·Î ¼³Á¤
-		setLayout(new GridLayout(3, 1, 5, 5)); // ¹èÄ¡°ü¸®ÀÚ »ı¼º
-		JButton square = new JButton("»ç°¢"); // JButton square»ı¼º
-		JButton straight = new JButton("Á÷¼±"); // JButton straight»ı¼º
-		JButton circle = new JButton("Å¸¿ø"); // JButton circle»ı¼º
-		square.addActionListener(new MyActionListener()); // square¿¡ ActionListener´Ş±â
-		straight.addActionListener(new MyActionListener());// straight¿¡ ActionListener´Ş±â
-		circle.addActionListener(new MyActionListener());// circle¿¡ ActionListener´Ş±â
+		setBackground(Color.BLUE); // ë°°ê²½ì„ blueë¡œ ì„¤ì •
+		setLayout(new GridLayout(3, 1, 5, 5)); // ë°°ì¹˜ê´€ë¦¬ì ìƒì„±
+		JButton square = new JButton("ì‚¬ê°"); // JButton squareìƒì„±
+		JButton straight = new JButton("ì§ì„ "); // JButton straightìƒì„±
+		JButton circle = new JButton("íƒ€ì›"); // JButton circleìƒì„±
+		square.addActionListener(new MyActionListener()); // squareì— ActionListenerë‹¬ê¸°
+		straight.addActionListener(new MyActionListener());// straightì— ActionListenerë‹¬ê¸°
+		circle.addActionListener(new MyActionListener());// circleì— ActionListenerë‹¬ê¸°
 
-		add(square); // square ¹öÆ° ´Ş±â
-		add(straight); // straight ¹öÆ° ´Ş±â
-		add(circle); // circle ¹öÆ° ´Ş±â
+		add(square); // square ë²„íŠ¼ ë‹¬ê¸°
+		add(straight); // straight ë²„íŠ¼ ë‹¬ê¸°
+		add(circle); // circle ë²„íŠ¼ ë‹¬ê¸°
 
 	}
 
-	// ActionListener ±¸Çö
+	// ActionListener êµ¬í˜„
 	private class MyActionListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent e) {
-			a.la.setText(e.getActionCommand());//¹öÆ°ÀÇ text°ªÀ¸·Î ¶óº§ÀÇ °ªÀ» ¼³Á¤
+			a.la.setText(e.getActionCommand());//ë²„íŠ¼ì˜ textê°’ìœ¼ë¡œ ë¼ë²¨ì˜ ê°’ì„ ì„¤ì •
 		}
 	}
 }
 
-class C extends JPanel { // JPanelÀ» »ó¼Ó¹Ş´Â CÅ¬·¡½º
-	C(A a) { //AÅ¬·¡½º¸¦ ÆÄ¶ó¹ÌÅÍ·Î ¹Ş´Â C»ı¼ºÀÚ
+class C extends JPanel { // JPanelì„ ìƒì†ë°›ëŠ” Cí´ë˜ìŠ¤
+	C(A a) { //Aí´ë˜ìŠ¤ë¥¼ íŒŒë¼ë¯¸í„°ë¡œ ë°›ëŠ” Cìƒì„±ì
 		add(new B(a));
 	}
 }

@@ -6,7 +6,7 @@ public class MouseEventAllExFrame extends JFrame {
 	JLabel la = new JLabel(" Move Me");
 
 	MouseEventAllExFrame() {
-		setTitle("MouseListener¿Í MouseMotionListener ¿¹Á¦");
+		setTitle("MouseListenerì™€ MouseMotionListener ì˜ˆì œ");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Container c = getContentPane();
 		MyMouseListener listener = new MyMouseListener();
@@ -15,7 +15,7 @@ public class MouseEventAllExFrame extends JFrame {
 		c.setLayout(null);
 		la.setSize(80, 20);
 		la.setLocation(100, 80);
-		c.add(la); // ·¹ÀÌºí ÄÄÆ÷³ÍÆ® »ğÀÔ
+		c.add(la); // ë ˆì´ë¸” ì»´í¬ë„ŒíŠ¸ ì‚½ì…
 		setSize(300, 200);
 		setVisible(true);
 	}
